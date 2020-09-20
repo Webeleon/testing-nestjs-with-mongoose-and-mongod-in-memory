@@ -2,9 +2,10 @@
   "name": "testing-with-in-memory-mongoose",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Webeleon <julien@webeleon.dev>",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "repository": "https://github.com/Webeleon/testing-nestjs-with-mongoose-and-mongod-in-memory",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",

@@ -1,0 +1,26 @@
+name: Testing
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: install
+      run: npm ci
+
+    - name: test
+      run: |
+        npm test
+        npm run test:cov
+        npm run test:e2e
+
+    - name: lint
+      run: npm run lint
