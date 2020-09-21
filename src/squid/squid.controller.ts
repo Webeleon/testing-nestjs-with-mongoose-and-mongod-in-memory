@@ -12,9 +12,6 @@ export class SquidController {
 
   ) {
       const squid = await this.squidService.getSquid();
-      Logger.debug(squid, 'squid controller')
-      return `
-     <img src="${squid.url}" />
-      `;
+      return `<img src="${squid.url}" />`;
   }
 }

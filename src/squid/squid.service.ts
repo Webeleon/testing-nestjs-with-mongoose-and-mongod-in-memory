@@ -21,7 +21,6 @@ export class SquidService {
   async getSquid(): Promise<Squid> {
     const count = await this.squidModel.countDocuments().exec();
     const randomIndex = Math.abs(Math.round(Math.random() * count));
-    Logger.debug(randomIndex, 'Squid random index');
     return this.squidModel.findOne().skip(randomIndex).exec();
   }
 
